@@ -12,6 +12,6 @@
 
 IP-адрес 84.201.129.136
 
-Frontend https://...
+Frontend https://andrey.mesto.nomoredomainsicu.ru
 
-Backend https://...
+Backend https://api.andrey.mesto.nomoredomainsicu.ru
