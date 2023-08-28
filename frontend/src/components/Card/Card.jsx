@@ -6,12 +6,12 @@ export default function Card({ card, onOpenImage, onCardDelete, onCardLike }) {
   const [isLike, setIsLike] = useState(false);
 
   useEffect(() => {
-    setIsLike(card.likes.some((i) => i._id === currentUser._id));
+    setIsLike(card.likes.some((i) => i === currentUser._id));
   }, [card, currentUser]);
 
   return (
     <li className="elements__card elements__card-list">
-      {currentUser._id === card.owner._id && (
+      {currentUser._id === card.owner && (
         <button className="elements__img-trash" onClick={() => onCardDelete(card._id)} />
       )}
       <img

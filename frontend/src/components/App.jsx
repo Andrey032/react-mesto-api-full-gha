@@ -125,7 +125,7 @@ function App() {
 
   //Функция обработки запроса лайк и дизлайк
   function handleCardLike(card) {
-    const isLiked = card.likes.some((i) => i._id === currentUser._id);
+    const isLiked = card.likes.some((i) => i === currentUser._id);
     if (isLiked) {
       api
         .deleteLike(card._id, localStorage.jwt)
@@ -142,9 +142,6 @@ function App() {
         .catch((err) => console.error(err));
     }
   }
-
-
-
 
   //Запрос на сервер для удаления карточки
   function handleDeletionOnSubmit(evt) {

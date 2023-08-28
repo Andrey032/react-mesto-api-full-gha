@@ -29,10 +29,10 @@ class Api {
   setUserInfo(data, token) {
     return fetch(`${this._url}/users/me`, {
     method: 'PATCH',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${token}`,
-    },
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
       body: JSON.stringify({
         name: data.username,
         about: data.userjob
@@ -46,7 +46,7 @@ class Api {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`,
+        'Authorization': `Bearer ${token}`
       },
       body: JSON.stringify({
         avatar: data.avatar
@@ -60,7 +60,7 @@ class Api {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`,
+        'Authorization': `Bearer ${token}`
       },
       body: JSON.stringify({
         name: data.name,
@@ -74,7 +74,7 @@ class Api {
     return fetch(`${this._url}/cards/${cardId}/likes`, {
       method: 'PUT',
       headers: {
-        'Authorization': `Bearer ${token}`,
+        'Authorization': `Bearer ${token}`
       }
     })
     .then(this._checkResponse);
@@ -84,7 +84,7 @@ class Api {
     return fetch(`${this._url}/cards/${cardId}/likes`, {
       method: 'DELETE',
       headers: {
-        'Authorization': `Bearer ${token}`,
+        'Authorization': `Bearer ${token}`
       }
     })
     .then(this._checkResponse);
@@ -94,7 +94,7 @@ class Api {
     return fetch(`${this._url}/cards/${cardId}`, {
       method: 'DELETE',
       headers: {
-        'Authorization': `Bearer ${token}`,
+        'Authorization': `Bearer ${token}`
       }
     })
     .then(this._checkResponse);
@@ -102,7 +102,7 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: 'https://api.andrey.mesto.nomoredomainsicu.ru',
+  baseUrl: 'http://localhost:3000',
 });
 
 export default api;
