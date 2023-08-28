@@ -10,7 +10,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 84.201.129.136
+IP 158.160.62.204
 
 Frontend https://andrey.mesto.nomoredomainsicu.ru
 
